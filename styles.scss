@@ -6,6 +6,25 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+.white {
+
+  .header {
+    background-color: #dcd9d9;
+    color: #2b2b2b;
+  }
+
+  .hero__section {
+    background-color: #fff;
+    color: #000;
+  }
+
+}
+
+body.white {
+  background-color: #fff;
+  color: #000;
+}
+
 /*------- header-------- */
 
 .header {
@@ -23,6 +42,13 @@ body {
   &__button::before {
     background-image: url(images/user.png);
   }
+}
+
+.theme {
+  margin-left: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .logo {
@@ -825,6 +851,53 @@ font-style: normal;
 font-weight: 400;
 line-height: 110%;
 }
+
+.modal-register {
+  display: none;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  top: 200px;
+  left: 500px;
+  position: fixed;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 8px;
+  background-color: grey;
+
+  
+
+  &__title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  &__input {
+    background-color: rgb(198, 197, 197);
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+}
+
+.active-modal {
+  display: flex;
+  animation-name: show-modal;
+  animation-duration: 1s;
+}
+
+@keyframes show-modal {
+  0% {
+    transform: translateX(-1000px)
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
 
 @media (max-width: 1024px) {
   .full__menu {
